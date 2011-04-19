@@ -7,6 +7,6 @@ open( 'target/dirA/thefile', 'w' ) {|f|
   f.puts 'Contents of the file'
 }
 puts 'Copying'
-FileUtils.cp( 'target/dirA/thefile', 'target/dirB/thefile' )
+FileUtils.cp( 'target/dirA/thefile', 'target/dirB/the_other_file' )
 puts 'Copying harder'
-FileUtils.cp( 'target/dirA/thefile', 'target/dirB/thefile' )
+FileUtils.cp( 'target/dirA/thefile', 'target/dirB/the_other_file' )
