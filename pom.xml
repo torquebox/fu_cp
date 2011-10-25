@@ -18,6 +18,20 @@
     FU#cp
   </description>
 
+  <repositories>
+    <repository>
+      <id>codehaus</id>
+      <name>Codehaus repo</name>
+      <url>http://repository.codehaus.org/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
   <pluginRepositories>
     <pluginRepository>
       <id>sonatype-snapshots</id>
@@ -41,7 +55,7 @@
     <dependency>
       <groupId>org.jruby</groupId>
       <artifactId>jruby-complete</artifactId>
-      <version>1.6.1</version>
+      <version>1.6.5</version>
     </dependency>
   </dependencies>
 
@@ -50,7 +64,7 @@
       <plugin>
         <groupId>de.saumya.mojo</groupId>
         <artifactId>jruby-maven-plugin</artifactId>
-        <version>0.27.0-SNAPSHOT</version>
+        <version>0.27.0</version>
 	<executions>
 	  <execution>
 	    <id>fu, fu#cp</id>
@@ -59,7 +73,7 @@
 	      <goal>jruby</goal>
 	    </goals>
             <configuration>
-	      <jrubyVersion>1.6.1</jrubyVersion>
+	      <jrubyVersion>1.6.5</jrubyVersion>
 	      <jrubySwitches>--${ruby.compat.version}</jrubySwitches>
 	      <fork>true</fork>
               <file>fu_cp.rb</file>
